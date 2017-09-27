@@ -2,7 +2,7 @@
 [Docker] OpenJDK
 
 1. Download [Docker](https://www.docker.com/community-edition)
-2. docker pull andreysaksonov/openjdk:latest
+2. docker pull andreysaksonov/openjdk
 
 #### Authors
 * [Andrey Saksonov](https://saksonov.me)
