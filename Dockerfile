@@ -2,7 +2,7 @@ FROM alpine:edge
 
 ENV LANG=C.UTF-8 \
     JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk \
-    PATH=$PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin \
+    PATH=$PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:$JAVA_HOME/bin \
     OPENJDK8_PACKAGE_VERSION=8.144.01-r0 \
     BASH_PACKAGE_VERSION=4.3.48-r2
 
