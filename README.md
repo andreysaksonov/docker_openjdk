@@ -1,5 +1,5 @@
-## docker_opendk
-[Docker] OpenJDK
+## docker_openjdk
+OpenJDK Docker Image
 
 [![](https://images.microbadger.com/badges/image/andreysaksonov/openjdk.svg)](https://microbadger.com/images/andreysaksonov/openjdk)
 
