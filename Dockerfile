@@ -1,10 +1,10 @@
-FROM alpine:edge
+FROM alpine:3.7
 
 ENV LANG=C.UTF-8 \
     JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk \
     PATH=$PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin \
     OPENJDK8_PACKAGE_VERSION=8.151.12-r0 \
-    BASH_PACKAGE_VERSION=4.4.12-r1
+    BASH_PACKAGE_VERSION=4.4.19-r1
 
 RUN { \
     echo '#!/bin/sh'; \
@@ -18,6 +18,6 @@ RUN { \
   && apk add --no-cache bash="$BASH_PACKAGE_VERSION" \
   && [ "$JAVA_HOME" = "$(java_home)" ]
 
-LABEL version="1.1" description="OpenJDK Docker Image" source="https://github.com/andreysaksonov/docker_openjdk"
+LABEL version="1.2" description="OpenJDK Docker Image" source="https://github.com/andreysaksonov/docker_openjdk"
 
 ENTRYPOINT ["/bin/bash"]
