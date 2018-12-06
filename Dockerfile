@@ -1,10 +1,10 @@
-FROM alpine:3.7
+FROM alpine:3.8
 
-ARG OPENJDK8_PKG_VER=8.151.12-r0
+ARG OPENJDK8_PKG_VER=8.181.13-r0
 ARG BASH_PKG_VER=4.4.19-r1
-ARG TINI_PKG_VER=0.16.1-r0
+ARG TINI_PKG_VER=0.18.0-r0
 ARG SU_EXEC_PKG_VER=0.2-r0
-ARG UNZIP_PKG_VER=6.0-r2
+ARG UNZIP_PKG_VER=6.0-r4
 
 RUN { \
     echo '#!/bin/sh'; \
@@ -28,6 +28,6 @@ RUN apk add --no-cache \
     su-exec="$SU_EXEC_PKG_VER" \
     unzip="$UNZIP_PKG_VER"
 
-LABEL version="8u151-16052018" description="OpenJDK Docker Image" source="https://github.com/andreysaksonov/docker_openjdk"
+LABEL version="8u181-06122018" description="OpenJDK 8 Docker Image by Andrey Saksonov" source="https://github.com/andreysaksonov/docker_openjdk"
 
 ENTRYPOINT ["/bin/bash"]
